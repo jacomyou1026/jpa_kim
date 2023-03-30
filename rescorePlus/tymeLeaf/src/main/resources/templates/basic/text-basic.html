@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <ul>
+        <li>
+            //escape - 문자그대로 출력
+            th: text사용
+            <span th:text="${data}"></span>
+        </li>
+        <li>
+            //unescape - 태그로 출력
+            th: utext사용
+            <span th:utext="${data}"></span>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            //th:inline="none" : 이 태그 안에 타임리프 적용 안되게 하기
+            <span th:inline="none">[[...]]</span> [[${data}]]  - escape
+        </li><li>
+            <span th:inline="none">[(...)]</span> [(${data})] - unescape
+        </li>
+
+    </ul>
+
+
+
+
+</body>
+</html>

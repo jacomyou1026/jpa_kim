@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul>
+<!--  {} -> 컨버터 적용 x
+  {{}} : 컨버터 적용 0 -->
+  <li>${number}: <span th:text="${number}" ></span></li>
+  <li>${{number}}: <span th:text="${{number}}" ></span></li>
+<!--  객체는 tostring()출력-->
+  <li>${ipPort}: <span th:text="${ipPort}" ></span></li>
+  <li>${{ipPort}}: <span th:text="${{ipPort}}" ></span></li>
+</ul>
+</body>
+</html>
